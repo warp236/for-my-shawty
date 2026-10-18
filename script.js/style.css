@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #713d53;
+  background: #fff7fa;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 24px 8%;
+  background: linear-gradient(135deg, #ffe5ef, #fff5f8, #fbd4e5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #d64d83;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #b64272;
+  border: 1px solid #ed9fbe;
+  padding: 8px 17px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: #e66c9b;
+  color: white;
+}
+
+.hero-content {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  position: relative;
+  z-index: 1;
+}
+
+.teddy-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.teddy-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  filter: drop-shadow(0 15px 20px #d66a9630);
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 530px;
+}
+
+.eyebrow,
+.letter-kicker {
+  color: #d85b8b;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: 1.15;
+  margin: 15px 0;
+  color: #823c5a;
+}
+
+.hero-text h1 span {
+  color: #e15d91;
+}
+
+.intro {
+  font-size: 17px;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+.scroll-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  color: white;
+  background: linear-gradient(135deg, #e76a9b, #cb477d);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px #d65d8c40;
+  transition: 0.3s;
+}
+
+.scroll-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px #d65d8c55;
+}
+
+.hero-heart {
+  position: absolute;
+  color: #e889ad;
+  opacity: 0.55;
+  animation: float 4s ease-in-out infinite;
+}
+
+.heart-one {
+  top: 25%;
+  left: 5%;
+  font-size: 45px;
+}
+
+.heart-two {
+  bottom: 10%;
+  left: 48%;
+  font-size: 35px;
+  animation-delay: 1s;
+}
+
+.heart-three {
+  top: 20%;
+  right: 7%;
+  font-size: 55px;
+  animation-delay: 1.5s;
+}
+
+main {
+  padding: 80px 20px;
+  background:
+    radial-gradient(circle at top left, #ffe6ef, transparent 35%),
+    #fff9fb;
+}
+
+.letter {
+  max-width: 800px;
+  margin: auto;
+  padding: 45px;
+  border: 1px solid #f8d3e1;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0 15px 50px #c65b8420;
+  text-align: center;
+  animation: appear 1s ease;
+}
+
+.letter h2 {
+  font-family: 'Playfair Display', serif;
+  color: #c84e7e;
+  margin: 12px 0 25px;
+}
+
+.letter h3 {
+  color: #df5c90;
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+
+.letter > p:not(.letter-kicker):not(.reply) {
+  margin: 18px 0;
+  text-align: left;
+  font-size: 16px;
+}
+
+.love-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 35px 0;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffe0ec, #ffc5dc);
+  color: #cf477e;
+}
+
+.love-message h2 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 42px);
+}
+
+.love-message span {
+  font-size: 25px;
+}
+
+.pink-message {
+  background: #fff0f6;
+  border: 1px dashed #e68db0;
+  border-radius: 18px;
+  padding: 25px 15px;
+  margin: 25px 0;
+  color: #b73e71;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.heart-button {
+  border: none;
+  background: linear-gradient(135deg, #e86b9d, #c84279);
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  padding: 13px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 7px 18px #d65d8c35;
+}
+
+.heart-button:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.reply {
+  color: #d34c83;
+  font-weight: bold;
+  margin-top: 15px;
+  min-height: 30px;
+}
+
+.signature {
+  margin-top: 30px;
+  color: #cf5686;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  background: #ffe5ef;
+  color: #a74a70;
+}
+
+footer span {
+  color: #e34c85;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  color: #e45c91;
+  pointer-events: none;
+  z-index: 10;
+  animation: rise 3s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 6%;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 45px 0;
+    text-align: center;
+  }
+
+  .teddy-img {
+    max-width: 260px;
+  }
+
+  .hero-text h1 {
+    font-size: 54px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+
+  .letter {
+    padding: 28px 20px;
+  }
+
+  .letter h2 {
+    font-size: 24px;
+  }
+
+  .letter > p:not(.letter-kicker):not(.reply) {
+    font-size: 15px;
+  }
+
+  .pink-message {
+    font-size: 15px;
+  }
+}
